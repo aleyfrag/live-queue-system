@@ -4,6 +4,7 @@ package com.myProject.auth_service.controller;
 import com.myProject.auth_service.dto.ApiResponse;
 import com.myProject.auth_service.dto.SendOtpRequest;
 import com.myProject.auth_service.dto.VerifyOtpRequest;
+import com.myProject.auth_service.kafka.KafkaProducerService;
 import com.myProject.auth_service.security.JwtUtil;
 import com.myProject.auth_service.service.OtpService;
 import org.slf4j.Logger;
@@ -26,6 +27,10 @@ public class AuthController {
 
     @Autowired
     private JwtUtil jwtUtil;
+
+    @Autowired
+    private KafkaProducerService kafkaProducerService;
+
 
     @PostMapping("/send-otp")
     public ResponseEntity<ApiResponse> sendOtp(@RequestBody SendOtpRequest request) {
@@ -52,6 +57,9 @@ public class AuthController {
 
         if(isValid){
             log.info("OTP verified successfully for email: {}", request.getEmail());
+            log.info("Before calling Kafka producer");
+            kafkaProducerService.sendMessage(request.getEmail());
+            log.info("after calling Kafka producer");
             String token = jwtUtil.generateToken(request.getEmail());
             return ResponseEntity.ok(token);
         }

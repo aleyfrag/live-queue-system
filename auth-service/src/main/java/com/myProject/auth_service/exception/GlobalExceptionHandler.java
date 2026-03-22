@@ -39,4 +39,11 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(new ErrorResponse("Something went wrong", LocalDateTime.now()));
     }
+
+    @ExceptionHandler(KafkaPublishException.class)
+    public ResponseEntity<?> handleKafkaException(KafkaPublishException ex) {
+
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(new ErrorResponse(ex.getMessage(), LocalDateTime.now()));
+    }
 }
