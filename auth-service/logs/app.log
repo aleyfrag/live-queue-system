@@ -1,39 +1,52 @@
-2026-03-22T09:34:08.996+05:30  INFO 46889 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Starting AuthServiceApplicationTests using Java 17.0.9 with PID 46889 (started by ashitosh in /Users/ashitosh/Projects/live-queue-system/auth-service)
-2026-03-22T09:34:09.000+05:30  INFO 46889 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2026-03-22T09:34:09.381+05:30  INFO 46889 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-22T09:34:09.382+05:30  INFO 46889 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-03-22T09:34:09.398+05:30  INFO 46889 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2026-03-22T09:34:09.815+05:30  WARN 46889 --- [auth-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-03-25T23:14:45.923+05:30  INFO 58316 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Starting AuthServiceApplicationTests using Java 17.0.9 with PID 58316 (started by ashitosh in /Users/ashitosh/Projects/live-queue-system/auth-service)
+2026-03-25T23:14:45.926+05:30  INFO 58316 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T23:14:46.300+05:30  INFO 58316 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-25T23:14:46.302+05:30  INFO 58316 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-25T23:14:46.317+05:30  INFO 58316 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2026-03-25T23:14:46.772+05:30  WARN 58316 --- [auth-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 2eefcd34-b788-4141-a168-8fea716c6ae4
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-03-22T09:34:09.818+05:30  INFO 46889 --- [auth-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-03-22T09:34:10.154+05:30  INFO 46889 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Started AuthServiceApplicationTests in 1.323 seconds (process running for 1.813)
-2026-03-22T10:13:52.814+05:30  INFO 47724 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Starting AuthServiceApplicationTests using Java 17.0.9 with PID 47724 (started by ashitosh in /Users/ashitosh/Projects/live-queue-system/auth-service)
-2026-03-22T10:13:52.817+05:30  INFO 47724 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2026-03-22T10:13:53.160+05:30  INFO 47724 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-22T10:13:53.162+05:30  INFO 47724 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-03-22T10:13:53.177+05:30  INFO 47724 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2026-03-22T10:13:53.635+05:30  WARN 47724 --- [auth-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 7c2dbb61-c33c-4105-90b9-c7f47fdc4b2a
+Using generated security password: 4d145336-9e26-4841-b66c-48f7909d2a86
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-03-22T10:13:53.639+05:30  INFO 47724 --- [auth-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-03-22T10:13:53.995+05:30  INFO 47724 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Started AuthServiceApplicationTests in 1.355 seconds (process running for 1.836)
-2026-03-22T10:29:01.497+05:30  INFO 48016 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Starting AuthServiceApplicationTests using Java 17.0.9 with PID 48016 (started by ashitosh in /Users/ashitosh/Projects/live-queue-system/auth-service)
-2026-03-22T10:29:01.498+05:30  INFO 48016 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2026-03-22T10:29:01.850+05:30  INFO 48016 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-22T10:29:01.852+05:30  INFO 48016 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-03-22T10:29:01.869+05:30  INFO 48016 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2026-03-22T10:29:02.321+05:30  WARN 48016 --- [auth-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-03-25T23:14:46.777+05:30  INFO 58316 --- [auth-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-25T23:14:47.089+05:30  INFO 58316 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Started AuthServiceApplicationTests in 1.332 seconds (process running for 1.822)
+2026-03-25T23:15:00.400+05:30  INFO 58347 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Starting AuthServiceApplicationTests using Java 17.0.9 with PID 58347 (started by ashitosh in /Users/ashitosh/Projects/live-queue-system/auth-service)
+2026-03-25T23:15:00.401+05:30  INFO 58347 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T23:15:00.775+05:30  INFO 58347 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-25T23:15:00.776+05:30  INFO 58347 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-25T23:15:00.794+05:30  INFO 58347 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-03-25T23:15:01.241+05:30  WARN 58347 --- [auth-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 7f85799b-2807-4bd9-bde7-ac925fd948b9
+Using generated security password: 19b48766-9770-4439-b5fb-a8292ed2fbd0
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-03-22T10:29:02.325+05:30  INFO 48016 --- [auth-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-03-22T10:29:02.623+05:30  INFO 48016 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Started AuthServiceApplicationTests in 1.316 seconds (process running for 1.909)
+2026-03-25T23:15:01.244+05:30  INFO 58347 --- [auth-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-25T23:15:01.539+05:30  INFO 58347 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Started AuthServiceApplicationTests in 1.299 seconds (process running for 1.761)
+2026-03-25T23:17:11.447+05:30  INFO 58458 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Starting AuthServiceApplicationTests using Java 17.0.9 with PID 58458 (started by ashitosh in /Users/ashitosh/Projects/live-queue-system/auth-service)
+2026-03-25T23:17:11.448+05:30  INFO 58458 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T23:17:11.803+05:30  INFO 58458 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-25T23:17:11.804+05:30  INFO 58458 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-25T23:17:11.821+05:30  INFO 58458 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2026-03-25T23:17:12.276+05:30  WARN 58458 --- [auth-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6b266967-1663-4988-8097-bd6547dbeb87
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-25T23:17:12.279+05:30  INFO 58458 --- [auth-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-25T23:17:12.610+05:30  INFO 58458 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Started AuthServiceApplicationTests in 1.349 seconds (process running for 1.956)
+2026-03-25T23:17:24.366+05:30  INFO 58486 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Starting AuthServiceApplicationTests using Java 17.0.9 with PID 58486 (started by ashitosh in /Users/ashitosh/Projects/live-queue-system/auth-service)
+2026-03-25T23:17:24.368+05:30  INFO 58486 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T23:17:24.693+05:30  INFO 58486 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-25T23:17:24.694+05:30  INFO 58486 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-25T23:17:24.711+05:30  INFO 58486 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-03-25T23:17:25.153+05:30  WARN 58486 --- [auth-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c9d56fec-fd80-46d1-8ea2-aab8a3c37002
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-25T23:17:25.157+05:30  INFO 58486 --- [auth-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-03-25T23:17:25.442+05:30  INFO 58486 --- [auth-service] [main] c.m.a.AuthServiceApplicationTests        : Started AuthServiceApplicationTests in 1.246 seconds (process running for 1.709)
