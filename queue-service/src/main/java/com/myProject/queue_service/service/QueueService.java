@@ -1,10 +1,13 @@
 package com.myProject.queue_service.service;
 
+
+import com.myProject.queue_service.controller.QueueController;
 import com.myProject.queue_service.entity.QueueEntity;
 import com.myProject.queue_service.exception.QueueEmptyException;
 import com.myProject.queue_service.exception.UserAlreadyExistException;
 import com.myProject.queue_service.exception.UserNotFoundException;
 import com.myProject.queue_service.repository.QueueRepository;
+import io.netty.util.internal.PriorityQueue;
 import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,97 +15,56 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Queue;
 
 @Service
 public class QueueService {
 
     private static final Logger log = LoggerFactory.getLogger(QueueService.class);
 
+    private  Queue<String> queue = new LinkedList<>();
 
-    @Autowired
-    QueueRepository queueRepository;
 
-    @Transactional
-    public int addUser(String email) throws UserAlreadyExistException {
-        try{
-            log.info("Adding user in queue : {}",email);
 
-            QueueEntity entity = new QueueEntity();
-            entity.setEmail(email);
+    public synchronized void addUser(String email)  {
 
-            queueRepository.save(entity);
-
-            log.info("User successfully added in ");
-
-        }catch (DataIntegrityViolationException e){
-            log.warn("Duplicate user attempt {}",email);
-            throw new UserAlreadyExistException("User already present in queue");
+        if(queue.contains(email)){
+            log.error("User already in queue: {}",email);
 
         }
 
-        return getPosition(email);
+        queue.add(email);
+        System.out.println("user list " +queue);
+        log.info("User added in queue: {}",email);
+
     }
 
 
-    public int getPosition(String email) throws UserNotFoundException{
-
-        QueueEntity entity = queueRepository.findByEmail(email)
-                .orElseThrow(() -> {
-                    log.error("User not found: {}", email);
-                    return new UserNotFoundException("User not found in queue");
-                });
-        int position = queueRepository.getPositionById(entity.getId());
-
-        log.info("Position for {} is {}",email,position);
-
-        return position;
-    }
-
-
-    public List<QueueEntity> getAllUsers(){
-        return queueRepository.findAllByOrderByIdAsc();
-    }
-
-    @Transactional
-    public String serveNextUser() throws QueueEmptyException {
-        List<QueueEntity> list = queueRepository.findAllByOrderByIdAsc();
-
-        if(list.isEmpty()){
-            log.error("Queue is empty");
-            throw new QueueEmptyException("Queue is empty");
+    public synchronized String serveUser(){
+        if(queue.isEmpty()){
+            return "queue is empty";
         }
 
-        QueueEntity firstUser = list.get(0);
-
-        queueRepository.delete(firstUser);
-
-        log.info("User served and removed : {}",firstUser.getEmail());
-
-        log.info("Notification sent to : {}",firstUser.getEmail());
-
-        return firstUser.getEmail();
-
+        String servedUser = queue.poll();
+        log.info("User served : {}",servedUser);
+        return  servedUser;
     }
 
-    @Transactional
-    public void removeUser(String email) throws UserNotFoundException{
-        log.info("User requested to leave queue: {}", email);
+    public synchronized  int getPosition(String email){
+        int position = 1;
 
-        QueueEntity user = queueRepository.findByEmail(email)
-                .orElseThrow(()-> {
+        for (String user : queue) {
+            if (user.equals(email)) {
+                return position;
+            }
+            position++;
+        }
 
-                    log.error("User not found: {}", email);
-
-                    return new UserNotFoundException("User not found in queue");
-                });
-
-        queueRepository.delete(user);
-
-        log.info("User removed successfully: {}", email);
+        return -1;
     }
-
 
 
 

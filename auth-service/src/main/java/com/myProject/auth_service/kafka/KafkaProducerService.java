@@ -24,9 +24,15 @@ public class KafkaProducerService {
         try {
             log.info("Sending message to Kafka topic: {} for email: {}", TOPIC, email);
 
-            kafkaTemplate.send(TOPIC, email);
-
-            log.info("Message successfully sent to Kafka for email: {}", email);
+            kafkaTemplate.send(TOPIC, email).whenComplete((result, ex)->{
+                if(ex==null){
+                    log.info("Message sent successfully to topic: {} offset: {}",
+                            TOPIC,
+                            result.getRecordMetadata().offset());
+                } else{
+                    log.error("Failed to send message to Kafka", ex);
+                }
+            });
 
             System.out.println(" Sent to Kafka: " + email);
         } catch (Exception e){

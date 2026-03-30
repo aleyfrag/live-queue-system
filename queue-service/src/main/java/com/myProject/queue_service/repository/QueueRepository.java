@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
-public interface QueueRepository extends JpaRepository<QueueEntity,Long> {
+
+public interface QueueRepository  {
 
     Optional<QueueEntity> findByEmail(String email);
 

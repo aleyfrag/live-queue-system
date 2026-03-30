@@ -39,12 +39,14 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
-#  queue-service:
-#    build: ./queue-service
-#    container_name: queue-service
-#    ports:
-#      - "8082:8082"
-#    depends_on:
-#      - kafka
-#    environment:
-#      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+  queue-service:
+    build: ./queue-service
+    container_name: queue-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - kafka
+    environment:
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+    restart: always
+

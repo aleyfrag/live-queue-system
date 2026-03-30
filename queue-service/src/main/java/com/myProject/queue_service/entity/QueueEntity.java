@@ -19,4 +19,9 @@ public class QueueEntity {
     private String email;
     private int position;
 
+
+
+
+
+
 }
